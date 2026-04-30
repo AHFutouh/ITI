@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+        /*
+            Define animation then use it like a function
+            @keyframes animationName {
+                from {
+                    //Starting Point
+                }
+
+                to {
+                    //End Point
+                }
+            }
+        */
+
+        div.one {
+            width: 200px;
+            height: 200px;
+            background-color: #F00;
+            position: absolute;
+            -webkit-animation: coloring2 2s ease-in-out 1;
+            animation: coloring2 2s ease-in-out 1;
+            /*name duration timing-function delay iteration-count direction fill-mode animation-play-state;
+                                        default: none 0 ease 0 1 normal none running*/
+
+            animation-name: coloring2;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            /*infinite*/
+            animation-direction: alternate-reverse;
+            /*reverse | alternate(normal then reverse) | alternate-reverse(reverse then normal)*/
+            animation-delay: 2s;
+            /*default: 0*/
+            animation-fill-mode: forwards;
+            /*, default: none;
+        forwards: بيوقفه عند اخر keyframe
+        backwards: بياخد اول كي انت اديته حتي من قبل الديلاي وبعدين يتحرك
+        both: بيوقف عند اخر واحد وبعدين يكمل مباشر يعني بينفذ الاتنين ويقف عند اخر واحد
+        */
+            animation-play-state: running;
+            /*default: running*/
+            animation-timing-function: ease;
+        }
+
+        div.one:hover {
+            animation-play-state: paused;
+        }
+
+        div.two {
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+            border-radius: 50%;
+            position: absolute;
+            -webkit-animation: coloring2 4s ease-in-out 2;
+            animation: coloring2 4s ease-in-out 2;
+            /*name duration timing-function delay iteration-count direction fill-mode;*/
+        }
+
+        div.two:hover {
+            animation-name: none;
+        }
+
+        @keyframes coloring1 {
+            from {
+                background-color: #F00;
+            }
+
+            to {
+                background-color: #0F0;
+            }
+
+            /*The same as
+        0% {
+            background-color: #F00;
+        }
+
+        100% {
+            background-color: #0F0;
+        }
+        */
+        }
+
+        @keyframes coloring2 {
+            0% {
+                background-color: #F00;
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                background-color: #00F;
+                top: 0;
+                left: 500px;
+            }
+
+            50% {
+                background-color: palevioletred;
+                top: 500px;
+                left: 500px;
+            }
+
+            75% {
+                background-color: yellow;
+                top: 500px;
+                left: 0;
+            }
+
+            100% {
+                background-color: #000;
+                top: 100px;
+                left: 0;
+            }
+
+            /*@-webkit-keyframes name {}  must repeat foreach browser
+         0%, 100% {} we can write like that for the same properties*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>

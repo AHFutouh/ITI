@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meter Colors Demo</title>
+<style>
+  body {
+    font-family: Arial;
+    padding: 20px;
+    max-width: 500px;
+  }
+
+  meter {
+    width: 100%;
+    height: 25px;
+  }
+
+  /* Chrome / Edge / Safari styling */
+  meter::-webkit-meter-optimum-value {
+    background: green;
+  }
+  meter::-webkit-meter-suboptimum-value {
+    background: orange;
+  }
+  meter::-webkit-meter-even-less-good-value {
+    background: red;
+  }
+
+  /* Firefox fallback (simple styling) */
+  meter {
+    background: #eee;
+  }
+
+  input {
+    width: 100%;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h3>Storage Usage</h3>
+
+<meter id="meter"
+       min="0" max="1"
+       low="0.4" high="0.8"
+       optimum="0.5"
+       value="0.5"></meter>
+
+<p id="text">50% (Optimal ✅)</p>
+
+<input type="range" min="0" max="100" value="50" oninput="updateMeter(this.value)">
+
+<script>
+function updateMeter(val) {
+  const meter = document.getElementById("meter");
+  const text = document.getElementById("text");
+
+  const value = val / 100;
+  meter.value = value;
+
+  let status = "";
+
+  if (value < 0.4) {
+    status = "Too Low ⚠️";
+  } else if (value > 0.8) {
+    status = "Too High ❌";
+  } else if (Math.abs(value - 0.5) < 0.1) {
+    status = "Optimal ✅";
+  } else {
+    status = "Acceptable 🙂";
+  }
+
+  text.textContent = val + "% (" + status + ")";
+}
+</script>
+
+</body>
+</html>

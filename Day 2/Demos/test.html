@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        .first {
+            border: 3px solid #00F;
+            width: 500px;
+            height: 300px;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            line-height: 300px;
+            font-weight: bold;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(15, 110, 36);
+            /* background-image: url(flowers.jpg); */
+
+
+            /* border-radius: 10px 0 30px 40px; */
+            border-width: 30px;
+            /* box-sizing: border-box; */
+            border-image: url(border.png) 30 stretch;
+            /* image-src slice image-repeat(stretch-round-repeat-...) */
+            /*border-image-source: url(border.png);
+            border-image-slice: 30;
+            border-image-width: 20px;
+            border-image-repeat: round;
+            border-image-outset: 10px; */
+            /* border-image: linear-gradient(red, yellow) 30; */
+
+            /* background-clip: padding-box; */
+            /* box-shadow: inset OffsetX OffsetY Blur Spread Color*/
+            /*box-shadow: 10px 10px 5px 1px orange, -10px -10px 5px 0px greenyellow;*/
+            /* text-shadow: 5px 2px 5px yellow; */
+        }
+
+        @font-face {
+            font-family: SaraFont;
+            src: url('fonts/SofiaSans.woff2');
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        @font-face {
+            font-family: Sara2Font;
+            src: url('fonts/Bungee-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: myNewFont;
+            src: url('fonts/Dancing_Script/static/DancingScript-SemiBold.ttf');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: myNewFont;
+            src: url('fonts/Dancing_Script/static/DancingScript-Regular.ttf');
+            font-weight: 200;
+        }
+
+        .second {
+            background-color: aquamarine;
+            width: 300px;
+            height: 100px;
+            border: 3px solid #00F;
+            font-family: myNewFont, "Dancing Script", cursive, 'Sara2Font';
+            font-weight: 200;
+        }
+
+        .third {
+            height: 250px;
+            border: 3px solid black;
+            padding: 20px;
+            margin: 20px;
+            font-size: 20px;
+
+
+            column-count: 3;
+            column-rule-style: dashed;
+            column-rule-width: 5px;
+            column-rule-color: red;
+            /* column-rule: dashed red 5px; */
+            column-gap: 30px;
+            /* column-width: 400px; */
+            column-fill: balance;
+            /*balance*/
+
+        }
+
+        .third h2 {
+            column-span: all;
+            /*auto*/
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .fourth {
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+
+            transition-property: all;
+            /* background-color, width, height */
+            transition-duration: 5s;
+            transition-delay: 1s;
+            transition-timing-function: ease-out;
+            /* transition: 5s all ease-out 1s; */
+        }
+
+        .fourth:hover {
+            width: 500px;
+            height: 500px;
+        }
+
+        .fifth {
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            background-color: red;
+
+            /* animation-name: 'Sara'; */
+            /* animation-duration: 2s; */
+            /* animation-delay: 2s; */
+            /* animation-timing-function: steps(5) */;
+            /* animation-iteration-count: 3; */
+            /* animation-direction: alternate ;*/
+            /* animation-fill-mode: forwards; */
+
+        }
+
+        @keyframes Sara {
+            /* from {
+                width: 500px;
+                height: 500px;
+                background-color: blue; 
+            }
+
+            to {
+                width: 800px;
+                height: 800px;
+                background-color: green;
+            } */
+
+            0% {
+                width: 500px;
+                height: 500px;
+                background-color: blue;
+            }
+
+            50% {
+                width: 600px;
+                height: 600px;
+                background-color: green;
+            }
+
+            100% {
+                width: 700px;
+                height: 700px;
+                background-color: yellow;
+            }
+        }
+
+        .fifth:hover {
+            animation-play-state: paused;
+        }
+
+        #container {
+            margin: 20px 200px;
+        }
+
+        .t1 {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: red;
+        }
+
+        .t1:hover {
+            transform: translateX(30px); 
+            /* transform:  translate(30px,20px); */
+
+            /* transform: scale(2); */
+
+            /* transform: skew(10deg); */
+            /* transform-origin: top right; */
+        }
+
+        .t2 {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: blue;
+        }
+        #container2{
+            width: 600px;
+            height: 300px;
+        }
+        #red, #blue, #yellow {
+            width: 200px;
+            height: 300px;
+            display: inline-block;
+        }
+
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        This is My First Div
+    </div>
+
+    <div class="second">
+        This is My Second Div
+    </div>
+
+    <div class="third">
+        <h2>Heading of the new paragraph</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corrupti quidem enim, dolorum eius sed in
+            libero natus reiciendis ex culpa nobis aspernatur illo, odit molestias, necessitatibus soluta sint minus.
+        </p>
+    </div>
+
+    <div class="fourth">
+        <h2>Transition</h2>
+    </div>
+
+    <div class="fifth">
+        <h2>Animation</h2>
+    </div>
+    <div id="container">
+        <div class="t1">
+            <h2>Transform</h2>
+        </div>
+
+        <div class="t2">
+            <h2>Transform</h2>
+        </div>
+    </div>
+
+    <div id="container2">
+        <div id="blue">Blue</div>
+        <div id="yellow">Yellow</div>
+        <div id="red">Red</div>
+    </div>
+</body>
+
+</html>

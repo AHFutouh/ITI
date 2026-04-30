@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div 
+        ondragover="event.preventDefault()"
+        ondrop="mydrop()"
+        id="dropDiv"  style="width:400px;height: 300px;border:3px solid red" ondrop="mydrop()"
+       >
+        drop here
+    </div>
+    <img draggable="true" ondragstart="dragMe(this)" src="p.png" id="img1" style="width:90px;height: 90px;">
+    <img draggable="true" ondragstart="dragMe(this)" src="asd.jpg" id="img2" style="width:90px;height: 90px;">
+    <script>
+        var dragElement;
+        function dragMe(elem){
+            dragElement=elem;
+            //dragElement=event.target;
+            console.log(event.target)
+        }
+        function mydrop(){
+            var imgElem=dragElement.cloneNode(true);//document.getElementById("img1");
+            if(imgElem.id!="img2"){
+                var dropAreaElem=document.getElementById("dropDiv");
+                dropAreaElem.appendChild(imgElem);
+            }
+        }
+    </script>
+</body>
+
+</html>

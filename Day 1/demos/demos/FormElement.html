@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+  <form novalidate>
+        <input type="text" list="names">
+        <datalist id="names">
+            <option>Ahmed</option>
+            <option>Ali</option>
+            <option>Basma</option>
+            <option>Christen</option>
+            <option>Mohamed</option>
+            <option>Mahmoud</option>
+        </datalist>
+
+
+
+    <input placeholder="Enter name" type="text" required pattern="[a-zA-Z]{3,}" title="char only and more than 3 letter">
+    <input placeholder="Enter Age" type="number">
+     <label for="em" >Email</label>  <input type="email" id="em" required>
+    <input type="password">
+    <input type="color">
+    <input type="range">
+    <input type="dateTime-locals">
+    <input type="month">
+    <input type="year">
+    <input type="time" >
+    <input type="date" >
+    <select multiple>
+        <option>Enginnering</option>
+        <option selected>Scince</option>
+    </select>
+    <label >Search</label><input type="search" value="ITI">
+    <input type="checkbox" id="ITI"> <label for="ITI">Like ITI :) </label><br>
+    <input type="button" onclick="">
+    <input type="submit" value="send" formnovalidate>
+    <input type="reset">
+
+
+  </form>  
+</body>
+</html>

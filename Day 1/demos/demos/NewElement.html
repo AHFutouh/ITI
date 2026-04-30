@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        meter,progress{
+            width:200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>ITI</summary>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, nesciunt exercitationem doloremque ullam illum cumque corrupti, dolores sapiente sit fuga tenetur incidunt. Eius culpa quaerat quod. Rerum eum quisquam eaque.</p>
+    </details>
+    <audio controls  id="myaudio">
+        <source src="audio/bgsound.mp3" type="audio/mpeg">
+        <source src="audio/bgsound.wav" type="audio/wav">
+        
+      Your browser does not support the audio element.
+    </audio>
+
+<input type="button" onclick="startSound()">
+
+
+    <meter min="0" max="100" value="65" low="20" high="80" optimum="65"></meter>
+    <progress min="0" max="100" value="0" id="progress1"></progress>
+    <input type="button" value="Move" onclick="Move()">
+    <div>11-11-2022 10:00:00PM</div>
+    <time >2022-11-11 22:00:00</time>
+    <time datetime="2022-11-11 22:00:00">11 nov 2022 10:00:00PM</time>
+    HEllo In 
+    <mark>ITI</mark>
+    <br>
+    <del>100$</del>
+    <br>
+    <code>
+    <var>int x=5;</var>
+    int z;
+    z=x+10;
+    </code>
+    
+
+
+
+
+
+    <script>
+        function startSound(){
+                document.getElementById("myaudio").play();
+        }
+        function Move(){
+            setInterval(()=>
+            {
+                var elem=document.getElementById("progress1");
+                elem.value+=10;
+                
+        },500)
+            
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

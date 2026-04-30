@@ -1,0 +1,5 @@
+https://caniuse.com/ //To test support of css3 properties in diffrent browsers
+https://www.theappguruz.com/tag-tools/web/CSSAnimations/ //Animation with Code
+https://projects.lukehaas.me/css-loaders/ //Css3 Spinners
+https://www.cssfontstack.com/ //Font Face 
+https://fonts.google.com/ //Google Fonts

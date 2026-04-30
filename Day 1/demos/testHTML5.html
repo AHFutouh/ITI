@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main {
+            background-color: #333;
+            color: #CCC;
+            text-align: center;
+            padding: 5px;
+        }
+        nav {
+            background-color: #DDD;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li:after {
+            content: ' |';
+        }
+
+        nav ul li:last-of-type:after {
+            content: '';
+        }
+        nav ul li:hover {
+            background-color: aquamarine;
+        }
+
+        main > aside {
+            width: 25%;
+            float: left;
+            background-color: antiquewhite;
+            padding: 2%;
+        }
+
+        article {
+            background-color: #EEE;
+            padding: 5%;
+            margin: 5%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main > section {
+            width: 50%;
+            float: left;
+            background-color: beige;
+        }
+
+        main > section header {
+            background-color: #b38282;
+            color: white;
+            font-size: 20px;
+            padding: 1%;
+            text-align: center;
+
+        }
+
+        aside > section {
+            padding: 5%;
+            margin: 5%;
+            background-color: #EEE;
+            font-size: 20px;
+        }
+
+        aside > section header {
+            padding: 3%;
+            margin-bottom: 5%;
+            font-weight: bold;
+            background-color: #CCC;
+        }
+
+        aside > section > ul {
+            list-style: none;
+        }
+
+        /*.tasks ul li span {
+            width: 10%;
+        }*/
+        .tasks ul li progress {
+            width: 80%;
+        }
+
+
+        figure.imgFigure {
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 10px;
+            margin-top: 5%;
+            text-align: center;
+        }
+        figure code {
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 10px;
+            margin-top: 5%;
+            display: block;
+            width: 100%;
+        }
+
+        figure img {
+            max-width: 100%;
+            margin-top: 5%;
+            border: 1px solid #CCC;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main">
+        <h1>Welcome To My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>SignIn</li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque quidem provident vitae dolore at,
+                quibusdam iste, reprehenderit voluptatibus, labore velit voluptatem illo eveniet. Fuga enim assumenda
+                tenetur minima earum laboriosam.</article>
+            <article>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos fugiat ut, dicta eligendi
+                aliquid laboriosam magnam molestias sit fuga ab aliquam ipsam commodi? Iure magnam impedit praesentium
+                cupiditate enim! Saepe?</article>
+        </aside>
+        <section>
+            <header>Main Header</header>
+            <section class="newElements">
+                <div>
+
+                    <span>Color: </span><input type=color />
+                    <p>Hello<br>iamosamafromelzerowebschool</p>
+                    <p>Hello<wbr>iam</wbr><wbr>osama</wbr><wbr>from</wbr><wbr>elzero</wbr><wbr>web</wbr><wbr>school</wbr></p>
+
+                </div>
+            </section>
+        </section>
+        <aside>
+            <section class="skills">
+                <header>Products</header>
+                <ul>
+                    <li>Product 1 <meter min=0 max=1 value="0.6" low="0.2" high="0.8" optimum="0.5"></meter>
+                    </li>
+                    <li>Product 2
+                        <meter min=0 max=1 value="0.9" low="0.2" high="0.8"></meter>
+                    </li>
+                    <li>Product 3
+                        <meter min=0 max=1 value="0.1" low="0.2" high="0.8"></meter>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="tasks">
+                <header>Tasks</header>
+                <ul>
+                    <li><span>Task 1: </span><progress value="70" max="100"></progress></li>
+                    <li><span>Task 2: </span><progress value="50" max="100"></progress></li>
+                    <li><span>Task 3: </span><progress value="20" max="100"></progress></li>
+                </ul>
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using Details</header>
+                <details open>
+                    <summary>Article 1</summary>
+                    <p>Lorem <mark>ipsum dolor</mark> sit amet consectetur adipisicing elit. Facilis dolores cum
+                        aliquid officia ullam incidunt, quaerat modi similique esse quis consectetur ab ratione
+                        voluptatum saepe! Temporibus ipsa nulla odio velit.</p>
+                </details>
+
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using &lt;wbr&gt;</header>
+                <details>
+                    <summary>Article 2</summary>
+                    <a href="#">https://<wbr>profile.w3schools</wbr><wbr>.com/log-in?redirect_url=</wbr><wbr>https%3A%2F%2F</wbr><wbr>www.w3schools</wbr><wbr>.com%2Fcssref%2</wbr><wbr>Fcss3_pr_column-fill</wbr>.php</a>
+                </details>
+
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using &lt;figure&gt;</header>
+                <figure>
+                    <figcaption>Figure 2-1 for Code</figcaption>
+                    <code>
+                            var <var>i</var> = 5;
+                            console.log(i);
+                    </code>
+                </figure>
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using &lt;figure&gt;</header>
+                <figure class="imgFigure">
+                    <img src="asd.jpg" />
+                    <img src="asd.jpg" />
+                    <img src="asd.jpg" />
+                    <figcaption>Figure 2-2 for 3 children</figcaption>
+                </figure>
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using &lt;time&gt;</header>
+                This website Created at <time datetime="2023-01-22">Jan, 22th 2023</time> <br> or <br>
+                This website Created at <time datetime="2023-01-22 16:20:55">Jan, 22th 2023</time>
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using &lt;dialog&gt;</header>
+                <dialog open>This Dialog new Element in HTML5</dialog>
+            </section>
+
+            <section class="Articles">
+                <header>Article About Using &lt;Bdi&gt;</header>
+                <ul>
+                    <li>Sara: 100 point</li>
+                    <li>Ali : 200 point</li>
+                    <li><bdi>محمد</bdi> : 150 point</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

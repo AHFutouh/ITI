@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multi Column</title>
+    <style>
+        /*column-count: number; To divide content into columns instead of using multiple paragraphs*/
+        div {
+            border: 1px solid #CCC;
+            padding: 10px;
+            -webkit-column-count: 4;
+            column-count: 4; /*Number of columns*/
+            column-gap: 100px; /*Space between columns*/
+            column-rule: 5px dotted #080; /*Border between columns default: Medium none color; Width Style Color*/
+            /*
+                column-rule-width: 5px;
+                column-rule-style: dotted;
+                column-rule-color: #080;
+            */
+
+            /*column-width: 400px;Width of the column default: auto; equal widths*/
+
+            /*
+                The column-fill property specifies how to fill columns, balanced or not.
+                Tip: If you add a height to a multi-column element, you can control how the content fills the columns. 
+                The content can be balanced or filled sequentially.
+            */
+
+            /*
+                height: 400px;
+                column-fill: balance;
+            */
+
+            /*columns: 100px 5; default: auto auto; column-width column-count*/
+        }
+
+        div h2 {
+            column-span: all; /*default: 1; means appear in coulmn1 if all means come first and under it appear columns*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Coulmn Heading</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint minus, adipisci nam ea at minima modi dolorum
+        dolore natus, laborum quidem aliquid repudiandae officiis ratione! Quam eligendi dolores magnam iste?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo laborum ad rem provident, eligendi, repudiandae
+        nostrum nisi quae vero pariatur molestias. Perspiciatis sapiente sit fuga delectus tenetur ab ut inventore!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda laboriosam quidem asperiores obcaecati
+        placeat sunt voluptatibus labore! Repellendus omnis quae at sed magni. Laborum eum minima ipsum nisi obcaecati!
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Font Face</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        div {
+            font-family: 'Sofia Sans';
+            /*
+                لما بكتب في ال inspect 
+                بيظهرلي اختيارات لانواع خطوط ودول مجموعه الخطوط الامنه الموجوده في  كل انظمه التشغيل اسمها 
+                Web safe font
+                الخطوط اللي بعد الكومه هيشتغل لو الاول مش موجود علي الجهاز ولازم يكون لايق علي الموقع ومجربينه 
+                اكتب في جوجل Web Safe Font
+                الخطوط الجميله اللي بنشوفها في التصاميم لو استخدمت خط موجود عندي ورفعت الموقع وناس استخدمته مش موجود عندها هيظهر مش حلو والحل اللي ال CSS
+                قدمته هو انك تعرف الخط بنفسك وتستخدمه وترفعه علي موقعك بحيث أول ما الشخص يدخل الفونت بيتعمله دوانلود في البراوزر عنده ويشوف الموقع بنفس الشكل عندك
+                وجوجل بيقدم الخاصيه دي والخطوط دي عن طريق ملف نحط اللينك بتاعه عندنا ونستخدمه
+                معرف جواه الخطوط ونختار الخط اللي هنستخدمه 
+            */
+        }
+
+        /*
+            لو عندي فونت جديد انا اللي هعرفه والطريقه اللي لو فتحت لينك جووجل هلاقيه مستخدمه 
+            بنعرف اسم الخط ولينك الملف بتاعه بس طبعا هنا مش معانا فهيدي ايرور ان مفيش فايل 
+            وطبعا لازم بنعرف جميع انواع الخطوط لكل المتصفحات وده عالم كبير مش مجرد نوع خط واحد
+            انواع الخطوط دي زي 
+            TTF: True Type Font
+            OTF: Open Type Font
+            EOT: Ebedded Type Font
+            WOFF: Web Open Font
+            WOFF2: Web Open Font 2
+            SVG: Scalable Vector Graphic
+            بنحطه كله علشان يشتغل علي كل المتصفحات مش واحد بس والتاني لأ
+
+        */
+
+        @font-face {
+            font-family: sara-ali;
+            src: url('fonts/SaraAli.ttf');
+            src: url('fonts/SaraAli.otf');
+            src: url('fonts/SaraAli.woff');
+            src: url('fonts/SaraAli.woff2');
+            src: url('fonts/SaraAli.svg');
+        }
+
+        p {
+            font-family: sara-ali;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Test Font Face
+    </div>
+    <p>
+        Test Custom Font
+    </p>
+</body>
+
+</html>

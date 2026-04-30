@@ -1,0 +1,255 @@
+.d1{
+    width: 200px;
+    height: 200px;
+    background-color: #DDD;
+    margin: 20px auto;
+    /*border-radius*/
+    border-radius: 10px 50px 60px 20px;  /*top left bottom right*/
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.d2{
+    width: 200px;
+    height: 200px;
+    background-color: #EEE;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+
+    /*box-shadow: Horizontal Shadow required| Vertical Shadow required| Color default black; // default value: none, minus value revert shadow*/
+    /*box-shadow: Horizontal | Vertical | Blur | Color*/
+    /*box-shadow: Horizontal | Vertical | Blur | Spread | Color*/
+    /*box-shadow: Horizontal | Vertical | Blur | Spread | Color | inset.outset default outset, inset means shadow from inner*/
+    box-shadow: -5px -5px 8px 5px #DDD inset; 
+    /* We can add more than one shadow by adding ,*/
+    
+    /* box-shadow: -5px -5px 8px 5px #F00, 
+                5px 5px 8px #00F,
+                10px 10px 5px #0F0;  */
+
+    -webkit-box-shadow: -5px -5px 8px 5px #F00;
+    -moz-box-shadow: -5px -5px 8px 5px #F00;
+    -o-box-shadow: -5px -5px 8px 5px #F00;
+    -ms-box-shadow: -5px -5px 8px 5px #F00;
+    box-shadow: -5px -5px 8px 5px #F00;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /*default content-box*/;
+}
+
+section{
+    width: 940px;
+    margin: 20px auto;
+    background: #EEE;
+    overflow: hidden;
+}
+
+.left{
+    float: left;
+    width: 340px;
+    width: 20%;
+    background: #F00;
+    padding: 10px;
+}
+
+.right{
+    float: right;
+    width: 600px;
+    width: 80%;
+    background: #00F;
+    border: 1px solid #0F0;
+}
+
+.img{
+    margin: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    transition: all 0.5s ease-in-out; 
+}
+
+.img:hover{
+    box-shadow: 7px 7px 20px #E4E4E4,
+    -7px -7px 20px #E4E4E4;
+}
+
+/*text-shadow: Horizontal-Shadow Vertical-Shadow Blur-Radius Color*/
+h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 80px;
+    text-shadow: none;
+}
+h1:hover{
+    text-shadow: 1px 2px 3px #F00,
+                2px 3px 7px #0F0;
+}
+
+/*text-overflow default clip*/
+.d3{
+    padding: 5px;
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    width: 300px;
+    font-family: Arial, Tahoma;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /**/
+}
+.d3:hover{
+    overflow: visible;
+    white-space: normal;
+}
+
+.d4{
+    padding: 5px;
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    width: 300px;
+    font-family: Arial, Tahoma;
+    word-wrap: break-word ;/*default normal*/
+    transform: rotate(60deg)/*degree*/
+}
+.container{
+    padding: 10px;
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    width: 600px;
+    font-family: Arial, Tahoma;
+    margin: 100px auto;
+    height: 200px;
+}
+
+.child{
+    padding: 5px;
+    border: 1px solid rgb(94, 82, 82);
+    background-color: #0F0;
+    height: 180px;
+    transition: all 0.5s ease-in-out;
+    transform: skew(10deg)
+
+}
+.child:hover{
+    transform: scale(1.5,1); /*scale(2) = scale(2,2)*/
+    transform: translateY(-60px) scale(0.75) rotate(30deg)
+}
+
+.d5{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid #00F;
+
+    /*transform: matrix(a, b, c, d, x , y)
+      transform: matrix(ScaleX, SkewX, SkewY, ScaleY, TranslateX, TranslateY) all numbers without deg or px
+      transform: matrix(1, 0, 0, 1, 300, 30) = transform: translate(300px, 30px)
+      */
+      transition: all 0.5s ease-in-out;
+      transform: matrix(-1, 0, 0, 1, 300, 30)
+}
+.d5:hover{
+    transform: matrix(-1, 0, 0, 1, 300, 30)
+}
+
+body{
+    perspective: 600px; /*space between element and user, applied to the parent*/
+    perspective-origin: 50% 50%;/*used with persective, named finishing point, default 50% 50%
+    perspective-origin: X Y;  may be center or left or right or botton depends on the direction of eyes looking at the element
+    left=0 right=100% center=50%    100% 50% = left center*/
+}
+.tom{
+    border: 1px solid #EEE;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    display: block;
+}
+.tom:hover{
+    transform: translateZ(100px)
+}
+
+.rotate{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: all 1s ease-in-out;
+    margin: 20px auto;
+
+}
+.rotate:hover{
+    transform: rotate(360deg);
+    transform-origin: bottom right;
+}
+
+/*transform-style: take flat or preserve-3d, flat مش بيحافظ علي الثري دي */
+.father{
+    width: 300px;
+    height: 300px;
+    background-color: #00F;
+    position: relative;
+    transition: all 1s ease-in-out;
+    transform: rotateY(45deg);
+    margin: 50px auto;
+    transform-style: preserve-3d;
+}
+.child1{
+    width: 300px;
+    height: 300px;
+    background-color: #0F0;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    transform: rotateY(45deg);
+}
+.child2{
+    width: 300px;
+    height: 300px;
+    background-color: #F00;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    transform: translateZ(20px) rotateY(45deg);
+}
+
+.father:hover{
+    transform: rotateY(360deg);
+}
+
+/*
+background-size: 100% 90%; Width heigh; contain; cover;
+background-clip: border-box; padding-box; content-box;
+background-origin: border-box; padding-box; content-box; with img background
+bsckground: url('../img.jpg');
+background-repeat: no-repeat;
+
+overflow-x: hidden; scroll; visible;
+overflow-y: hidden; scroll; visible;
+
+resize: default none; both; horizontal; vertical;
+
+display: none; //تحجز المكان للعنصر
+opacity: 0; //بتشيل مكان العنصر كأنه مش موجود
+opacity: 0.9; = filter: alpha(opacity= 90) for IE old
+visibility:hidden = opacity:0
+
+Transition: <Property*> | <Duration*> | <Timing Function> | <Delay>; //* means required
+transition: width 3s, background-color 1.5s;
+transition-property: width; or transition: width, background-color; // default value: all // none to disable it
+transition-duration: 1s; or transition-duration: 1s, 2s;// default: 0s
+transition-timing-function: ease-in;  // تبدأ بطيئة و تتزايد 
+                            ease-out;  // تبدأ سريعة وتتناقص  
+                            ease-in-out; // تبدأ بطيئة و تسرع في الوسط وتنتهي بطيئة
+                            ease; // تبدأ بطيئة و تسرع في الوسط وتنتهي بطيئة مثل ايزاين اوت  لكن النهاية تكون أبطأ من البداية
+                            linear; // سرعة ثابتة من البداية الى النهاية
+
+*/

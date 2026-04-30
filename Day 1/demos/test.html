@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form autocomplete="on">
+        color: <input type="color"><br>
+        date: <input type="date"><br>
+        datetime-local: <input type="datetime-local"><br>
+        time: <input type="time" required><br>
+        month: <input type="month"><br>
+        week: <input type="week"><br>
+        Skills: <input type="text" list="skills-list"><br>
+        Email: <input type="email" multiple placeholder="Enter Email"><br>
+        number: <input type="number" placeholder="min:0 max:5" style="width: 150px;" step="2" min="0" max="5"><br>
+        range: 0<input type="range" value="10"  step="10">100<br>
+        search: <input type="search"><br>
+        tel: <input type="tel" pattern="(010|011|012)[0-9]{8}"><br>
+        url: <input type="url"><br>
+        name: <input type="text" autocomplete="name" name="un" autofocus><br>
+        <datalist id="skills-list">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>HTML5</option>
+            <option>CSS3</option>
+            <option>JavaScript</option>
+        </datalist>
+        upload photo: <input type="file" name="file"><br>
+        <input type="submit" value="Upload file" name="" id="" formenctype="multipart/form-data" formaction="index.html" formmethod="get"><br>
+        <input type="submit" name="" id="" formaction="welcome.html" formnovalidate formmethod="get">
+
+    </form>
+    <script>
+        /* document.forms[0].onsubmit = function(e){
+            e.preventDefault();
+            console.log(this.elements[0].value);
+            console.log(this.elements[1].value);
+            console.log(this.elements[2].value);
+            console.log(this.elements[3].value);
+            console.log(this.elements[4].value);
+            console.log(this.elements[5].value);
+            console.log(this.elements[6].value);
+            console.log(this.elements[7].value);
+            console.log(this.elements[8].value);
+            console.log(this.elements[9].value);
+            console.log(this.elements[10].value);
+            console.log(this.elements[11].value);
+            console.log(this.elements[12].value);
+            console.log(this.elements[13].value);
+            this.submit();
+        } */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation - Wave Audio Loading</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .loading {
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .loading span {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 5px;
+            width: 9px;
+            background-color: #9b59B6;
+            animation: Waving 1.5s infinite ease-in-out;
+        }
+
+        .loading span:nth-of-type(2) {
+            left: 11px;
+            animation-delay: 0.2s;
+        }
+
+        .loading span:nth-of-type(3) {
+            left: 22px;
+            animation-delay: 0.4s;
+        }
+
+        .loading span:nth-of-type(4) {
+            left: 33px;
+            animation-delay: 0.6s;
+        }
+
+        .loading span:last-of-type {
+            left: 44px;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes Waving {
+            0%, 50%, 100% {
+                height: 5px;
+                transform: translateY(0);
+                background-color: #9b59B6;
+            }
+
+            25% {
+                height: 30px;
+                transform: translateY(15px);
+                background-color: #3498D6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
