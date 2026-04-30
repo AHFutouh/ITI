@@ -1,0 +1,23 @@
+
+<img id="TIGER" src="tiger.gif" style="position:absolute; left:1000px" 
+	onclick="AnimateTiger()"/>
+
+
+
+<script>
+var TigerTimer;
+
+function AnimateTiger()
+{
+  	//document.getElementById("TIGER").style.left = "1000px";
+  	TigerTimer = setInterval("MoveTiger()", 20);
+}
+function MoveTiger()
+{
+	document.getElementById("TIGER").style.left= (parseInt(document.getElementById("TIGER").style.left)-2)+"px";
+	if (parseInt(document.getElementById("TIGER").style.left) < 0)
+	 {
+		clearInterval(TigerTimer);
+	}
+}
+</script>
