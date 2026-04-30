@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+    <title>JSON With AJAX</title>
+    <script>
+
+        var xhr;
+		
+        function getPage() 
+        {
+			
+			// 1- Create XHR
+			  xhr=new XMLHttpRequest();
+
+			//2- Check Server status, and deal with server return
+			xhr.onreadystatechange = statusCheck; 
+			
+			//3- Send Request
+			xhr.open('GET','5_2_4_webStud_json.txt', true);
+			xhr.send();
+			
+        }
+		
+		
+        function statusCheck() 
+        {
+            if (xhr.readyState == 4) //4= loaded
+            {
+                if (xhr.status == 200) //200=OK
+                {            
+					var jsonStr=xhr.responseText;
+                    alert(jsonStr);
+					alert( typeof jsonStr);
+                    
+					var jsonT =JSON.parse(jsonStr);
+					alert( typeof jsonT);
+					console.log(jsonT);
+                    document.write("jsonT.wclass.length= " + jsonT.wclass.length + "<br />jsonT.wclass[0].name: " + jsonT.wclass[0].student.name);
+                } 
+            }
+        }
+
+    
+            
+    </script>
+</head>
+<body>
+<input type="button" id="button2" onclick="getPage()" value="Get JSON" />
+
+
+</body>
+</html>

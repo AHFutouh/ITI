@@ -1,0 +1,7 @@
+{
+	ID: 10,
+	name: "Ali",
+	City: "Assiut",
+	Job: null,
+	Married: true
+};

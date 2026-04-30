@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="num"/>
+    <input type="button" value="Click" onclick="showNumber()"/>
+    <span id="numSpan"></span>
+
+
+       <script>
+            window.onerror= handleError;
+
+            function handleError(m, u, lineNum){
+                alert(m);
+                alert(u);
+                alert(lineNum);
+            }
+               
+            function showNumber(){
+                var n= Number(document.getElementById("num").value);
+                if(n<0){
+                    throw new RangeError('Number is less than 0');
+                }
+                else if(n>100){
+                    throw new RangeError('Number is more than 100');
+                }
+                else{
+                    document.getElementById("numSpan").innerText=n;
+                }
+            }
+           
+        
+       </script>
+</body>
+</html>
