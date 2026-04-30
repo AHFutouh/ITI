@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Give 100%!"; 
+  var patt1 = /\d/g;
+  var result = str.replace(patt1,"5");
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
