@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: red;
+            color: white;
+            border: 1px solid blue ;
+            padding: 20px;
+            display: none;
+        }
+        #myDiv{
+            margin:10px;
+        }
+
+        .border{
+            border: 1px solid red;
+        }
+        .blue{
+            background-color: blue;
+        }
+
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="padding: 20px;" data-myatt = "test Data" id="myDiv" class="border blue" name="myDiv"><!--comment-->
+        <span>span one</span>
+        <a href="#" id="anchor" style="display: none;">Test</a>
+        <h1 id="hh">Heading</h1>
+    </div>
+    <form id="form1" name="element" class="box">
+
+    </form>
+
+    <form id="form2">
+        
+    </form>
+
+   
+    
+
+
+    <h2>Heading1</h2>
+    <p>Paragraph one</p>
+
+    <h2>Heading2</h2>
+    <p>Paragraph two</p>
+
+    <h2>Heading3</h2>
+    <p>Paragraph three</p>
+
+    <h2>Heading4</h2>
+    <p>Paragraph four</p>
+
+    <h2>Heading5</h2>
+    <p>Paragraph five</p>
+
+    <ul id="myUL"></ul>
+    <script>
+        var myDiv = document.getElementById("myDiv");
+      myDiv.style.color = "green";
+        myDiv.style.border = "1px solid blue";
+        myDiv.style.padding = "10px";
+        myDiv.style['-webkit-background-color'] = "lightYellow";
+
+       // myDiv.style.cssText += "color:green;background-color:lightYellow;border:1px solid blue"
+
+       myDiv.onmouseover = function(){
+        myDiv.classList.toggle("blue");
+        
+       }
+     
+
+      
+        
+    </script>
+</body>
+</html>

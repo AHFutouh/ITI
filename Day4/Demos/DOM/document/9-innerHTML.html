@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="menu">
+            <li>Home</li>
+            <li>Services</li>
+        </ul>   
+		<div id="div1">
+			
+		</div>
+        <script>
+            let menu = document.getElementById('menu');
+            console.log(menu.innerHTML);
+			menu.innerHTML += "<li>about</li>";
+			
+			let myDiv = document.getElementById('div1');
+			myDiv.textContent = "<b>Welcome to Javascript</b>";
+			myDiv.innerHTML = "<b>Welcome to Javascript</b>";
+        </script>
+    </body>
+</html>

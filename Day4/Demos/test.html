@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background-color: red;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      .border {
+        border: 1px solid yellow;
+      }
+      #myDiv {
+        padding: 20px;
+      }
+
+      p{
+        border: 1px solid blue;
+        padding: 20px;
+        background-color: lightgoldenrodyellow;
+      
+      }
+
+      #div1{
+        margin:20px;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <form action="" id="form1" border="1">
+      userName: <input type="text" name="userName" /><br />
+      password: <input value="123" type="password" name="password" /><br /> 
+      <input type="submit" value="Login" />
+      <input type="reset">
+    </form>
+    <div id="div1" name="mydiv" class="red" data-age="20" style="padding:10px; color: yellow;"><!--Comment-->
+      <span id="sp">Span 1</span>
+      <h3>Heading</h3>
+      <p style="display: none;">Parag one</p>
+    </div>
+   
+    <h2>Heading One</h2>
+    <p>Paragraph One</p>
+    <h2>Heading Two</h2>
+    <p>Paragraph Two</p>
+    <h2>Heading Three</h2>
+    <p>Paragraph Three</p>
+
+    <h2>Heading Four</h2>
+    <p>Paragraph Four</p>
+    <ul id="mySkills"></ul>
+
+    <input type="button"  name="" id="btn" value="Click Here">
+    <script>
+      var myForm = document.getElementById("form1");
+      console.log(myForm.length);
+      document.getElementById("sp").onclick = function () {
+        document.getElementById("btn").click();
+      };
+
+      document.getElementById("btn").onclick = function(event){
+        event.target.value= "Clicked";
+      }
+      /*
+      myDiv.style.color = "white";
+      myDiv.style.border = "2px solid black";
+      myDiv.style.backgroundColor = "gray";*/
+   
+       /*
+        var Headings = document.getElementsByTagName("h2");
+        for(let i =0; i< Headings.length;i++){
+          
+          Headings[i].onclick= function(){
+            Headings[i].nextElementSibling.style.display= "block";
+          }
+        }*/
+
+        
+
+
+        
+
+       var data = ["HTML", "CSS", "JS"];
+        var myUL = document.getElementById("mySkills");
+
+        var mydiv = document.createElement("div");
+        for(var i=0; i<data.length; i++){
+          var newLi = document.createElement("li");
+          newLi.innerText= data[i];
+          mydiv.appendChild(newLi);
+        }
+
+        myUL.innerHTML = mydiv.innerHTML;
+
+        var copiedUL = myUL.cloneNode(true);
+        copiedUL.id = "copiedSkills";
+        document.body.appendChild(copiedUL);
+
+
+
+/*
+        var copiedUL = document.getElementById("mySkills").cloneNode(true);
+        copiedUL.id="copied";
+        div.append(copiedUL)*/
+    </script>
+  </body>
+</html>

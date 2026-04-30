@@ -1,0 +1,38 @@
+
+<body>
+<center>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<img name="girl1" src="1.jpg" onmouseover="mouseIn(document.images[0])"
+   onmouseout="mouseOut(event.target)" ondblclick="alert('give me a name')">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<img name="girl2" src="2.jpg" id="m1" width="180" height="280" border="0" 
+onmouseover="mouseIn(this)"
+   onmouseout="mouseOut(document.getElementById('m1'))">
+
+
+</center>
+
+<script>
+    
+    function mouseIn(myImage) {
+
+        myImage.width = 300;
+        myImage.height = 350;
+        myImage.border = 2;
+
+    }
+
+    function mouseOut(myImage) {
+        myImage.width = 180;
+        myImage.height = 280;
+        myImage.border = 0;
+
+    }
+	
+</script>
+</body>

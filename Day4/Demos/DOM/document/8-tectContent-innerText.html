@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <div id="note">
+            JavaScript textContent Demo!
+            <span style="display:none">Hidden Text!</span>
+            <!-- my comment -->
+        </div>      
+        <script>
+            let note = document.getElementById('note');
+            console.log(note.textContent); //JavaScript textContent Demo! Hidden Text!
+
+            console.log(note.innerText); //JavaScript textContent Demo!
+			//note.textContent = "dggfgfgddx";
+        </script>
+    </body>
+</html>

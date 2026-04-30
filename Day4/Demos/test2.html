@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 3px solid blue;
+            padding: 10px;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" skill="test" style="margin: 10px;"  name="div1" class="box">welcome</div>
+    
+    <form action="test.html" id="form1" onsubmit="handleForm(event)" onreset="confirm('are you sure?')">
+        userName <input type="text" name="name"/><br>
+        password <input type="password" name="pass"/><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+
+
+
+    <h1 onclick="document.getElementById('chk').click()">Heading</h1>
+    <button id='btn' onclick="alert('test')">Click Here</button>
+    <input type="checkbox" value="" id="chk" onclick="alert(this.checked)">Check
+    <script>
+
+       function handleForm(ev){
+        ev.preventDefault();
+        var condition = true;
+
+        if(condition){
+            ev.target.submit();
+        }
+        console.log(ev.target.length)
+       }
+    </script>
+</body>
+</html>

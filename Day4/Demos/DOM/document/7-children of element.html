@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Get Child Elements</title>
+</head>
+<body>
+  <ul id="menu">
+    <li class="first">Home</li>
+    <li>Products</li>
+    <li class="current">Customer Support</li>
+    <li>Careers</li>
+    <li>Investors</li>
+    <li>News</li>
+    <li class="last">About Us</li>
+</ul>
+
+  <script>
+        let content = document.getElementById('menu');
+        let firstChild = content.firstChild; 
+        console.log(firstChild); //#text  because a text node is inserted to maintain the whitespace between the openning <ul> and <li> tags. 
+
+        
+        let firstElementChild = content.firstElementChild;
+        //console.log(firstElementChild); //<li class="first">Home</li>
+
+        //console.log(content.lastChild);  //#text
+
+        //console.log(content.lastElementChild); //<li class="last">About Us</li>
+
+        let children = content.childNodes;
+        //console.log(children);
+
+        children = content.children;
+        //console.log(children);
+  </script>
+</body>
+</html>

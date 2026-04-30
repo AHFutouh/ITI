@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS removeAttribute() Demo</title>
+</head>
+<body>
+    <a href="#" 
+       target="_blank" 
+       id="js">JavaScript</a>
+
+    <div id="main" data-progress="pending" data-value="10%"></div>
+
+    <script>
+        let link = document.querySelector('#js');
+        if (link.hasAttribute('target')) {
+            let attr = link.getAttribute('target');
+            console.log(attr);
+
+            link.setAttribute('target', '_self');
+            attr = link.getAttribute('target');
+            console.log(attr);
+            //link.removeAttribute('target');
+        }
+
+        for(let attr of link.attributes) {
+            //console.log(`${attr.name} = ${attr.value}` )  
+			console.log(attr.name + " = " + attr.value);
+        }
+        
+        let bar = document.querySelector('#main');
+        console.log(bar.dataset);
+    </script>
+</body>
+</html>

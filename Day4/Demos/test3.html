@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm" onreset="alert('Cleared')" onsubmit="alert('submitted')">
+        <input type="text" id="userName"></input>
+        <input type="password" id="pass"></input>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    Jadfdfdfdvd?
+    <input type="radio" value="a" id="ch1" onclick="alert('checked')">answer 1
+    <input type="checkbox" value="b">answer 2
+    <input type="checkbox" value="c">answer 3
+    <input type="checkbox" value="d">answer 4
+    <input disabled id="btn" type="button" value="Click Here" onclick="this.value= 'click Outside'">
+
+    <span onclick="chk()">Clear Form</span>
+    <select id="uni" onchange="show()" multiple>
+        <option value="A">Alex</option>
+        <option value="C">Cairo</option>
+        <option value="As">Asyut</option>
+    </select>
+    <input type="button" value="Show" onclick="showSelected()">
+    <script>
+        var uni = document.getElementById('uni');
+        console.log(uni.length);
+        function show(){
+            var selected = uni.selectedIndex;
+            var option = uni.options[selected];
+            alert(option.value);
+        }
+
+        function showSelected(){
+            for(var i = 0; i<uni.length ; i++){
+                if(uni[i].selected){
+                    alert(uni[i].text);
+                    if(uni[i].text == "Asyut"){
+                        uni[i].remove();
+                    }
+                }
+            }
+        }
+        var myForm = document.getElementById('myForm');
+        console.log(myForm.length);
+
+        function clearForm(){
+            myForm.submit();
+        }
+        function changeTxt(){
+            document.getElementById('btn').disabled = false;
+            document.getElementById('btn').click();
+        }
+        function chk(){
+            document.getElementById('ch1').click()
+        }
+    </script>
+</body>
+</html>

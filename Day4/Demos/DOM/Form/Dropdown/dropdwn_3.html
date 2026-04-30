@@ -1,0 +1,50 @@
+
+
+<b>Select Menu:</b>
+<select id="Menu" multiple size="4">
+  <option value="Item 1">This is Item 1</option>
+  <option value="Item 2">This is Item 2</option>
+  <option value="Item 3">This is Item 3</option>
+  <option value="Item 4">This is Item 4</option>
+  <option value="Item 5">This is Item 5</option>
+</select>
+<input type="button" value="Select" onclick="ShowItems()"/>
+
+<input type="button" value="addOption" onclick="addNewOption()"/>
+<p align = "center">
+<b>You selected items:</b>
+<div align="center">
+<span id="Values"></span>
+</div>
+</p>
+
+<script type="text/javascript">
+//document.getElementById("Menu").options[0].remove();
+function ShowItems()
+{
+
+  document.getElementById("Values").innerHTML = "";
+  for (i=0; i < document.getElementById("Menu").length; i++) 
+  {
+    if (document.getElementById("Menu").options[i].selected == true)
+   {
+		document.getElementById("Values").innerHTML+= 
+        document.getElementById("Menu").options[i].value + "<br/>";
+
+
+    }
+  }
+}
+
+function addNewOption(){
+
+  var option = "<option value='Item 6'>This is Item 6</option>";
+
+  var newOption = document.createElement("option");
+  newOption.text = "This is item 6";
+
+  console.log(option);
+  console.log(newOption);
+  document.getElementById("Menu").add(newOption);
+}
+</script>
