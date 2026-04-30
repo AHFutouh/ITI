@@ -1,0 +1,20 @@
+
+<body onclick="alert('I am Body')">
+<script>
+    function tryme(e)
+    {
+        alert("I am input");
+        alert(e.bubbles);
+        alert(e.cancelable);
+		//e.bubbles;
+       e.stopPropagation();
+    }
+</script>
+<b>Try clicking the text box & see what happens!</b>
+
+<div onclick="alert('I am Div')">
+    welcome
+    <input type="text" onclick="tryme(event)"/>
+</div>
+
+

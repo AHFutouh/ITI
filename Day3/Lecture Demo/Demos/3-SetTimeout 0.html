@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script type="text/javascript">
+		var t;
+		function timedMsg()
+		{
+			t = setTimeout("alert('3 seconds!')",3000)
+		}
+		
+		function stopTimeout(){
+			clearTimeout(t);
+			alert('Timeout canceled');
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="Display timed alertbox!"
+		onClick="timedMsg()">
+		
+		<input type="button" value="Cancel timeout"
+		onClick="stopTimeout()">
+	</form>
+	<p>Click on the button above. An alert box will be
+	displayed after 3 seconds.</p>
+</body>
+</html>

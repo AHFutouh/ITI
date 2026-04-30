@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+var c=0;
+var t;
+function timedCount()
+{
+    document.getElementById('txt').value=c;
+    console.log(c);
+    c++;
+}
+
+function startInt()
+{
+  t = window.setInterval(timedCount,1000);
+}
+
+function stopCount()
+{
+    window.clearInterval(t);
+}
+</script>
+</head>
+<body><form>
+<input type="button" value="Start count!" onClick="startInt()">
+<input type="text" id="txt">
+<input type="button" value="Stop count!" onClick="stopCount()">
+</form></body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body onload="i=setInterval(clock,1000)">
+  <div id="clock" style="text-align: center"></div>
+
+<script>
+  var i;
+function clock()
+{
+  var t=new Date();
+  document.getElementById("clock").innerHTML=t.toLocaleTimeString().bold();
+  //var s=document.getElementById("clock").value;
+  //alert(s);
+}
+
+
+
+</script>
+</form>
+<button onclick="clearInterval(i)">
+Stop interval</button></body>
+</html>

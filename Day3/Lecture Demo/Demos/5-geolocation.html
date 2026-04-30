@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<p>Click the button to get your coordinates.</p>
+
+	<button onclick="getLocation()">show location</button>
+	<button onclick="goPosition()">go to location</button>
+
+	<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+
+	<script>
+		var longitudeCoords=0;
+		var latitudeCoords=0;
+		
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} 
+		}
+
+		function showPosition(position) {
+		alert("Longitude: " + longitudeCoords);	
+			longitudeCoords = position.coords.longitude;
+			latitudeCoords = position.coords.latitude;
+			alert("Longitude: " + longitudeCoords);				
+			alert("Latitude: " + latitudeCoords);
+		}
+		function goPosition() {
+
+			var url = "http://maps.google.com/maps?q="+ latitudeCoords + ",+" +longitudeCoords ;
+			alert(url);
+			location.replace(url);
+        }
+	</script>
+
+</body>
+</html>

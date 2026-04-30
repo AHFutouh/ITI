@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript">
+var p;
+function show_popup()
+{
+p=window.createPopup();
+p.document.write("This is a pop-up! Click outside to close");
+p.document.bgColor="red";
+//document.write("This is a pop-up! Click outside to close");
+//p.show(x_position , y_position , width , height)
+p.show(200,200,350,250);
+}
+</script>
+</head><body>
+<button onclick="show_popup()">Create pop-up!</button>
+<button onclick="p.close()">Close pop-up!</button>
+</body></html>
